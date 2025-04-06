@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\MaintenanceToolController;
+use App\Http\Controllers\EquipementAudiovisuelController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -22,5 +23,9 @@ Route::middleware('auth')->group(function () {
 
 Route::resource('maintenance-tools', MaintenanceToolController::class)
     ->middleware(['auth']);
+
+Route::resource('equipement-audiovisuels', EquipementAudiovisuelController::class);
+    
+
 
 require __DIR__.'/auth.php';

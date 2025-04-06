@@ -13,6 +13,10 @@
                     <x-nav-link :href="route('maintenance-tools.index')" :active="request()->routeIs('maintenance-tools.*')">
                         {{ __('Outils de Maintenance') }}
                     </x-nav-link>
+
+                    <x-nav-link :href="route('equipement-audiovisuels.index')" :active="request()->routeIs('equipement-audiovisuels.*')">
+                        {{ __('Equipement Audiovisuels') }}
+                    </x-nav-link>
                 </div>
             </div>
 
