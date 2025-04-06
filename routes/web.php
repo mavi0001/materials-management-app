@@ -29,6 +29,21 @@ Route::resource('equipement-audiovisuels', EquipementAudiovisuelController::clas
 
 Route::resource('it-computer-equipments', ItComputerEquipmentController::class);
 
+use App\Models\MaintenanceTool;
+use App\Models\ItComputerEquipment;
+use App\Models\EquipementAudiovisuel;
+
+
+Route::get('/dashboard', function () {
+    return view('dashboard', [
+        'maintenanceToolsCount' => MaintenanceTool::count(),
+        'itEquipmentsCount' => ItComputerEquipment::count(),
+        'equipementaudiovisuel' => EquipementAudiovisuel::count(),
+        'recentActivities' => [],
+    ]);
+})->name('dashboard');
+
+
 
 
 
