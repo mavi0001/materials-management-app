@@ -51,7 +51,12 @@
                                 @endforeach
                             </tbody>
                         </table>
+
                     </div>
+                    <div class="mt-4">
+                        {{ $tools->links() }}
+                    </div>
+
                 </div>
             </div>
         </div>

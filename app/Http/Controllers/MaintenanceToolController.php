@@ -8,10 +8,11 @@ use Illuminate\Http\Request;
 class MaintenanceToolController extends Controller
 {
     public function index()
-    {
-        $tools = MaintenanceTool::all();
-        return view('maintenance-tools.index', compact('tools'));
-    }
+{
+    $tools = MaintenanceTool::paginate(5);
+    return view('maintenance-tools.index', compact('tools'));
+}
+
 
     public function create()
     {
