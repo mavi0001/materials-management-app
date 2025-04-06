@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Nouvel Outil de Maintenance') }}
+            {{ __('Nouvel Équipement IT & Computer') }}
         </h2>
     </x-slot>
 
@@ -9,7 +9,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
-                    <form method="POST" action="{{ route('maintenance-tools.store') }}">
+                    <form method="POST" action="{{ route('it-computer-equipments.store') }}">
                         @csrf
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -31,33 +31,32 @@
                                 <x-text-input id="quantity" class="block mt-1 w-full" type="number" name="quantity" min="1" value="1" required />
                             </div>
 
-                            <!-- Référence -->
+                            <!-- Référence Matériel -->
                             <div>
-                                <x-input-label for="material_reference" :value="__('Réf. Matériel')" />
+                                <x-input-label for="material_reference" :value="__('Référence Matériel')" />
                                 <x-text-input id="material_reference" class="block mt-1 w-full" type="text" name="material_reference" />
                             </div>
 
-                        <!-- Checkboxes -->
-                        <div class="space-y-4">
-                            <!-- En Stock -->
-                            <label class="flex items-center">
-                                <x-checkbox name="in_stock" checked />
-                                <span class="ml-2 text-sm text-gray-600">Disponible</span>
-                            </label>
+                            <!-- Checkboxes -->
+                            <div class="space-y-4">
+                                <!-- Disponible -->
+                                <label class="flex items-center">
+                                    <x-checkbox name="available" checked />
+                                    <span class="ml-2 text-sm text-gray-600">Disponible</span>
+                                </label>
 
-                            <!-- En Prêt -->
-                            <label class="flex items-center">
-                                <x-checkbox name="on_loan" />
-                                <span class="ml-2 text-sm text-gray-600">En Prêt</span>
-                            </label>
+                                <!-- En Prêt -->
+                                <label class="flex items-center">
+                                    <x-checkbox name="on_loan" />
+                                    <span class="ml-2 text-sm text-gray-600">En Prêt</span>
+                                </label>
 
-                            <!-- En Réforme -->
-                            <label class="flex items-center">
-                                <x-checkbox name="under_reform" />
-                                <span class="ml-2 text-sm text-gray-600">En Maintenance</span>
-                            </label>
-                        </div>
-
+                                <!-- En Maintenance -->
+                                <label class="flex items-center">
+                                    <x-checkbox name="under_maintenance" />
+                                    <span class="ml-2 text-sm text-gray-600">En Maintenance</span>
+                                </label>
+                            </div>
                         </div>
 
                         <div class="flex items-center justify-end mt-6">

@@ -17,6 +17,10 @@
                     <x-nav-link :href="route('equipement-audiovisuels.index')" :active="request()->routeIs('equipement-audiovisuels.*')">
                         {{ __('Equipement Audiovisuels') }}
                     </x-nav-link>
+
+                    <x-nav-link :href="route('it-computer-equipments.index')" :active="request()->routeIs('it-computer-equipments.*')">
+                        {{ __('Tt and Computer equipments') }}
+                    </x-nav-link>
                 </div>
             </div>
 
