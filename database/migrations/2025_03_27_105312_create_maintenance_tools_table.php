@@ -22,7 +22,9 @@ public function up()
         $table->boolean('under_reform')->default(false);
         $table->timestamps();
     });
+
 }
+
     /**
      * Reverse the migrations.
      */

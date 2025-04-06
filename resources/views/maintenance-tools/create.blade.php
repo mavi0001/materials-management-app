@@ -37,26 +37,27 @@
                                 <x-text-input id="material_reference" class="block mt-1 w-full" type="text" name="material_reference" />
                             </div>
 
-                            <!-- Checkboxes -->
-                            <div class="space-y-4">
-                                <!-- En Stock -->
-                                <label class="flex items-center">
-                                    <x-checkbox name="in_stock" checked />
-                                    <span class="ml-2 text-sm text-gray-600">En Stock</span>
-                                </label>
+                        <!-- Checkboxes -->
+                        <div class="space-y-4">
+                            <!-- En Stock -->
+                            <label class="flex items-center">
+                                <x-checkbox name="in_stock" checked />
+                                <span class="ml-2 text-sm text-gray-600">En Stock</span>
+                            </label>
 
-                                <!-- En Prêt -->
-                                <label class="flex items-center">
-                                    <x-checkbox name="on_loan" />
-                                    <span class="ml-2 text-sm text-gray-600">En Prêt</span>
-                                </label>
+                            <!-- En Prêt -->
+                            <label class="flex items-center">
+                                <x-checkbox name="on_loan" />
+                                <span class="ml-2 text-sm text-gray-600">En Prêt</span>
+                            </label>
 
-                                <!-- En Réforme -->
-                                <label class="flex items-center">
-                                    <x-checkbox name="under_reform" />
-                                    <span class="ml-2 text-sm text-gray-600">En Réforme</span>
-                                </label>
-                            </div>
+                            <!-- En Réforme -->
+                            <label class="flex items-center">
+                                <x-checkbox name="under_reform" />
+                                <span class="ml-2 text-sm text-gray-600">En Réforme</span>
+                            </label>
+                        </div>
+
                         </div>
 
                         <div class="flex items-center justify-end mt-6">

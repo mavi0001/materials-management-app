@@ -14,6 +14,8 @@ class MaintenanceTool extends Model
      *
      * @var array
      */
+
+
     protected $fillable = [
         'designation',
         'inventory_number',
@@ -21,8 +23,9 @@ class MaintenanceTool extends Model
         'material_reference',
         'in_stock',
         'on_loan',
-        'under_reform'
+        'under_reform',
     ];
+
 
     /**
      * The attributes that should be cast to native types.
