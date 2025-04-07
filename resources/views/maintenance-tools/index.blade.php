@@ -9,11 +9,17 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
-                    <div class="mb-4">
+                    <div class="flex justify-between items-center mb-4">
                         <a href="{{ route('maintenance-tools.create') }}"
-                           class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                             Ajouter un Nouvel Outil
                         </a>
+                        <form action="{{ route('maintenance-tools.index') }}" method="GET" class="flex">
+                            <input type="text" name="search" placeholder="Rechercher..." class="border border-gray-300 rounded-l px-3 py-2">
+                            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-r">
+                                Rechercher
+                            </button>
+                        </form>
                     </div>
 
                     <div class="overflow-x-auto">
@@ -51,12 +57,10 @@
                                 @endforeach
                             </tbody>
                         </table>
-
                     </div>
                     <div class="mt-4">
                         {{ $tools->links() }}
                     </div>
-
                 </div>
             </div>
         </div>

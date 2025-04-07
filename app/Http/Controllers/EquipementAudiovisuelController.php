@@ -7,11 +7,21 @@ use Illuminate\Http\Request;
 
 class EquipementAudiovisuelController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $equipements = EquipementAudiovisuel::paginate(5);
+        $query = EquipementAudiovisuel::query();
+
+        if ($request->filled('search')) {
+            $search = $request->input('search');
+            $query->where('designation', 'like', '%' . $search . '%')
+                ->orWhere('inventory_number', 'like', '%' . $search . '%');
+        }
+
+        $equipements = $query->paginate(5);
+
         return view('equipement-audiovisuels.index', compact('equipements'));
     }
+
 
     public function create()
     {
