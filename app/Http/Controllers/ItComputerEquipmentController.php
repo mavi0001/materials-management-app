@@ -9,7 +9,7 @@ class ItComputerEquipmentController extends Controller
 {
     public function index()
     {
-        $equipments = ItComputerEquipment::paginate(10);
+        $equipments = ItComputerEquipment::paginate(5);
         return view('it-computer-equipments.index', compact('equipments'));
     }
 

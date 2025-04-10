@@ -19,7 +19,7 @@
                     </x-nav-link>
 
                     <x-nav-link :href="route('it-computer-equipments.index')" :active="request()->routeIs('it-computer-equipments.*')">
-                        {{ __('Tt and Computer equipments') }}
+                        {{ __('Equipement Tt & Computer') }}
                     </x-nav-link>
                 </div>
             </div>

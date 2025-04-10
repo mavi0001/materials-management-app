@@ -11,7 +11,7 @@
                 <div class="p-6 bg-white border-b border-gray-200">
                     <div class="flex justify-between items-center mb-4">
                         <a href="{{ route('maintenance-tools.create') }}"
-                           class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                             Ajouter un Nouvel Outil
                         </a>
                         <form action="{{ route('maintenance-tools.index') }}" method="GET" class="flex">
